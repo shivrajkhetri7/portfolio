@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.2%;
+}
+body{
+
+}
+
+:root{
+    --primary-color:#000839;
+    --primary-shade:#00020b;
+    --para-color:#80849c;
+    --helper-color:#1264fa;
+    --white:#fff;
+}
+.container{
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.7rem;
+}
+
+ul{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+img{
+display: inline-block;
+width: 100%;
+}
+
+h1,h2,h3,h4{
+    color: var(--primary-color);
+}
+
+.para{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+}
+
+.header{
+    height: 9.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:  0  5.4rem;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 4rem;
+}
+
+.nav-link .code-btn{
+    padding: 1.2rem 2.4rem;
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: var(--helper-color);
+    color: var(--helper-color);
+    border-radius: 9.2rem;
+}
+
+.nav-link .navbar-link:hover,
+.nav-link .navbar-link:active
+{
+    color: var(--helper-color);
+    transition: linear;
+}
+
+.nav-link .code-btn:hover,
+.nav-link .code-btn:active
+{
+    background-color: var(--helper-color);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.mobile-navbar-btn{
+    display: none;
+}
+
+.mobile-menu[name='close']{
+    display: none;
+}
+
+section{
+    padding: 9rem 0;
+}
+
+.grid{
+    display: grid;
+    gap: 9.6rem;
+}
+
+.grid-column{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.btn-get-start{
+    background-color: var(--helper-color);
+    text-transform: capitalize;
+    padding: 1.4rem 2.4rem;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+    transition: all 0.2s linear;
+}
+
+.btn-get-start:hover,
+.btn-get-start:active{
+    transform: scale(1.2);
+    
+}
+
+/****************************
+        Card Sections
+ ****************************/
+
+ .main-section{
+     position: relative;
+ }
+
+ .main-section::before{
+    content: "";
+    background-color: #ebebee;
+    position: absolute;
+    display: inline-block;
+    bottom: 9.6rem;
+    right: 0;
+    height: 50%;
+    width: 30%;
+    z-index: -1;
+}
+
+.primary-heading{
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.main-section .para{
+    margin-top: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+.main-icon-style .icons{
+    margin-top: 1.6rem;
+    position: relative;
+    font-size: 6rem;
+}
+
+.main-icon-style .icons::after{
+content: "";
+  position: absolute;
+  background-color: var(--helper-color);
+  left: 0;
+  right: 0;
+  height: 60%;
+  width: 60%;
+  z-index: -1;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.main-icon-style h2{
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.main-icon-style .para{
+    line-height: 1.6;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.right-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-card img{
+    width: 90%;
+    box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-overlay{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--primary-color);
+    left: -10%;
+   padding: 3rem;
+}
+
+.image-overlay .para{
+    color: var(--white);
+}
+
+.image-overlay .para:nth-child(2){
+    font-size: bold;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.image-overlay .para:last-child{
+    margin: 0;
+}
+
+
+/****************************
+        Media query
+ ****************************/
+
+ @media (max-width:1250px) {
+     
+    .container{
+        padding: 0 6rem;
+    }
+
+    html{
+        font-size: 56.2%;
+    }
+ }
